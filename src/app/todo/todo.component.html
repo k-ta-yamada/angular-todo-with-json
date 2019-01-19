@@ -1,0 +1,9 @@
+<label>
+  <input #task
+    [(ngModel)]="todo.task"
+    (keyup.enter)="add()"
+    placeholder="add todo..."
+    >
+</label>
+
+<button (click)="add()">add</button>

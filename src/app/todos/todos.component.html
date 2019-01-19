@@ -1,0 +1,12 @@
+<h1>TODO APPS</h1>
+
+<h2>ADD TODO</h2>
+<app-todo (clickAdd)="handleClickAdd($event)"></app-todo>
+
+<h2 (click)="reload()">LIST</h2>
+<app-todo-listed [todos]="todos" (clickDelete)="handleClickDelete($event)"></app-todo-listed>
+
+<h3>debug</h3>
+<textarea name="" id="" cols="50" rows="50">
+  {{ todos | json }}
+</textarea>

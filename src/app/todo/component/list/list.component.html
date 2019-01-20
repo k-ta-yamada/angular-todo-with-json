@@ -1,8 +1,9 @@
 <div *ngFor="let todo of list">
-  <span>{{todo.id}}</span>
-  <input type="checkbox" [(ngModel)]="todo.done">
-  <input [(ngModel)]="todo.task">
+  <label>{{todo.id.toString().padStart(3, '0')}}: </label>
+
+  <input type="checkbox" [(ngModel)]="todo.done" (click)="toggleDone(todo)">
+
+  <input type="text" [(ngModel)]="todo.task">
+
   <button (click)="del(todo)">del</button>
 </div>
-
-<pre>{{list|json}}</pre>

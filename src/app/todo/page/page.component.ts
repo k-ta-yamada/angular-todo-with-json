@@ -23,4 +23,12 @@ export class PageComponent implements OnInit {
     );
   }
 
+  clickUpd(todo: Todo) {
+    this.todoService.upd(todo).subscribe(
+      r => {
+        console.log(r);
+      }
+    );
+  }
+
 }

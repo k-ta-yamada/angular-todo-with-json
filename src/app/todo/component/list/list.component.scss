@@ -1,8 +1,13 @@
-input {
+// div {
+//     width: 500px;
+// }
+
+input[type="text"] {
     font-size: large;
     padding: 5px;
     margin: 5px;
     border-width: 0px 0px 1px 0px;
+    width: 60%;
 }
 
 button {

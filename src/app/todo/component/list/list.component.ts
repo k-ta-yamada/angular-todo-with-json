@@ -12,9 +12,20 @@ export class ListComponent implements OnInit {
 
   @Output() clickDel = new EventEmitter<Todo>();
 
+  @Output() clickUpd = new EventEmitter<Todo>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleDone(todo: Todo) {
+    todo.done = ! todo.done;
+    this.upd(todo);
+  }
+
+  upd(todo: Todo) {
+    this.clickUpd.emit(todo);
   }
 
   del(todo: Todo) {

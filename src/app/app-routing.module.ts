@@ -4,7 +4,7 @@ import { PageComponent } from './todo/page/page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'todo', pathMatch: 'full' },
-  { path: '', component: PageComponent },
+  { path: 'todo', component: PageComponent },
 ];
 
 @NgModule({

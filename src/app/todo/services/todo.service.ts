@@ -19,4 +19,12 @@ export class TodoService {
   del(todo: Todo): Observable<object> {
     return this.http.delete(`${this.url}/${todo.id}`);
   }
+
+  add(todo: Todo): Observable<Todo> {
+    return this.http.post<Todo>(this.url, todo);
+  }
+
+  upd(todo: Todo): Observable<Todo> {
+    return this.http.put<Todo>(`${this.url}/${todo.id}`, todo);
+  }
 }

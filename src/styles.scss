@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+div {
+    border: 1px solid blue;
+    border-radius: 1rem;
+    padding: .5rem;
+    margin:  .5rem;
+}
+
+input {
+    font-size: large;
+    padding: .5rem;
+    margin:  .5rem;
+
+    &[type="text"] {
+        width: 50%;
+    }
+}
+
+button {
+    font-size: large;
+    padding: .5rem;
+    margin:  .5rem;
+    border-radius: .5rem;
+    width: 5rem;
+}

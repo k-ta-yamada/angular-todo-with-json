@@ -1,0 +1,16 @@
+<div *ngFor="let todo of todos">
+    <span>{{ todo.id.toString().padStart(3, '0') }}</span>
+
+    <input type="checkbox"
+        (click)="toggleDone(todo)"
+        [(ngModel)]="todo.done"
+        >
+
+    <input type="text"
+        [(ngModel)]="todo.task"
+        >
+
+    <button
+        (click)="del(todo)"
+        >del</button>
+</div>

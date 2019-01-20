@@ -1,0 +1,11 @@
+<h1>TODO app</h1>
+
+<h2>add</h2>
+<app-todo [todo]="todo" (clickAdd)="clickAdd($event)"></app-todo>
+
+<h2>list</h2>
+<app-todo-list
+    [todos]="todos"
+    (clickUpd)="clickUpd($event)"
+    (clickDel)="clickDel($event)"
+    ></app-todo-list>

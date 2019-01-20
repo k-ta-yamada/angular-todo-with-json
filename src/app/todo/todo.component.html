@@ -1,0 +1,8 @@
+<label for="">
+  <input type="text"
+    (keyup.enter)="add()"
+    [(ngModel)]="todo.task"
+    >
+</label>
+
+<button (click)="add()">add</button>

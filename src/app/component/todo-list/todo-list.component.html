@@ -1,21 +1,9 @@
-<h2>todo-list</h2>
-
 <div *ngFor="let todo of list">
-  <span>
-    {{todo.id.toString().padStart('0', 3)}}
-  </span>
+  <span>{{todo.id.toString().padStart('0', 3)}}</span>
 
-  <input
-    type="checkbox"
-    [(ngModel)]="todo.done"
-    (change)="upd(todo)">
+  <input type="checkbox" [(ngModel)]="todo.done" (change)="upd(todo)">
 
-  <input
-    type="text"
-    [(ngModel)]="todo.task"
-    disabled=true>
+  <input type="text" [(ngModel)]="todo.task" disabled=true>
 
-  <button (click)="del(todo)">
-    del
-  </button>
+  <button (click)="del(todo)">del</button>
 </div>

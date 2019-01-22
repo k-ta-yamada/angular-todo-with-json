@@ -1,0 +1,5 @@
+<div>
+  <input type="text" [(ngModel)]="todo.task" (keyup.enter)="add()"
+    autofocus placeholder="add todo">
+  <button (click)="add()">add</button>
+</div>

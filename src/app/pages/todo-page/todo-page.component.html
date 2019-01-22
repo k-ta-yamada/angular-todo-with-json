@@ -1,5 +1,5 @@
-<app-todo-list
-  [list]="todos"
-  (clickUpd)="clickUpd($event)"
-  (clickDel)="clickDel($event)"
-></app-todo-list>
+<h3>todo-add</h3>
+<app-todo-input (clickAdd)="clickAdd($event)"></app-todo-input>
+
+<h3>todo-list</h3>
+<app-todo-list [list]="todos" (clickUpd)="clickUpd($event)" (clickDel)="clickDel($event)"></app-todo-list>

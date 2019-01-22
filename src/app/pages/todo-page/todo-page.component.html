@@ -1,0 +1,7 @@
+<app-todo-detail (clickAdd)="clickAdd($event)"></app-todo-detail>
+
+<app-todo-list
+  [list]="todos"
+  (clickUpd)="clickUpd($event)"
+  (clickDel)="clickDel($event)"
+  ></app-todo-list>

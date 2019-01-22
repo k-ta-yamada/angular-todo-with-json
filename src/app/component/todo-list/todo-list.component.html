@@ -3,7 +3,7 @@
 
   <input type="checkbox" [(ngModel)]="todo.done" (change)="upd(todo)">
 
-  <input type="text" [(ngModel)]="todo.task" disabled=true>
+  <input type="text" [(ngModel)]="todo.task" disabled=true [class]="style(todo)">
 
   <button (click)="del(todo)">del</button>
 </div>

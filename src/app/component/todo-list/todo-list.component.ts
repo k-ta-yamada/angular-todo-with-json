@@ -27,4 +27,8 @@ export class TodoListComponent implements OnInit {
     this.clickDel.emit(todo);
   }
 
+  style(todo: Todo) {
+    return todo.done ? 'done' : '';
+  }
+
 }

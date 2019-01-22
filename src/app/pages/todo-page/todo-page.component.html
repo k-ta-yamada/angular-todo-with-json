@@ -1,3 +1,5 @@
-<p>
-  todo-page works!
-</p>
+<app-todo-list
+  [list]="todos"
+  (clickUpd)="clickUpd($event)"
+  (clickDel)="clickDel($event)"
+></app-todo-list>

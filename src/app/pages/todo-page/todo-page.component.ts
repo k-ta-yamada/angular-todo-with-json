@@ -17,6 +17,12 @@ export class TodoPageComponent implements OnInit {
     this.todoService.get().subscribe(r => this.todos = r);
   }
 
+  clickAdd(todo: Todo) {
+    this.todoService.add(todo).subscribe(
+      r => this.todos.push(r)
+    );
+  }
+
   clickUpd(todo: Todo) {
     this.todoService.upd(todo).subscribe();
   }

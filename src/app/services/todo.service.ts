@@ -21,19 +21,19 @@ export class TodoService {
 
   add(todo: Todo): Observable<Todo> {
     return this.http.post<Todo>(this.url, todo).pipe(
-      tap(r => this.log('get', r))
+      tap(r => this.log('add', r))
     );
   }
 
   upd(todo: Todo): Observable<Todo> {
     return this.http.put<Todo>(`${this.url}/${todo.id}`, todo).pipe(
-      tap(r => this.log('get', r))
+      tap(r => this.log('upd', r))
     );
   }
 
   del(todo: Todo): Observable<object> {
-    return this.http.delete<Todo>(`${this.url}/${todo.id}`).pipe(
-      tap(r => this.log('get', r))
+    return this.http.delete(`${this.url}/${todo.id}`).pipe(
+      tap(r => this.log('del', r))
     );
   }
 

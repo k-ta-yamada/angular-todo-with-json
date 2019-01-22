@@ -31,7 +31,7 @@ export class TodoService {
     );
   }
 
-  del(todo: Todo): Observable<Todo> {
+  del(todo: Todo): Observable<object> {
     return this.http.delete<Todo>(`${this.url}/${todo.id}`).pipe(
       tap(r => this.log('get', r))
     );

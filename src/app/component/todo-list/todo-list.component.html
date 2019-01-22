@@ -1,0 +1,9 @@
+<div *ngFor="let todo of list">
+  <label>{{todo.id.toString().padStart(3, '0')}}</label>
+
+  <input type="checkbox" [(ngModel)]="todo.done" (change)="upd(todo)">
+
+  <input type="text" [(ngModel)]="todo.task" [class.done]="todo.done">
+
+  <button (click)="del(todo)">del</button>
+</div>

@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "mock:server": "json-server --watch mocks/data.json",
     "start:proxy": "ng serve --proxy-config proxy.conf.json",
-    "start:proxy:mock:server": "concurrently --kill-others \"npm run start:proxy\" \"npm run mock:server\""
+    "serve": "concurrently --kill-others \"npm run start:proxy\" \"npm run mock:server\""
   },
   "private": true,
   "dependencies": {

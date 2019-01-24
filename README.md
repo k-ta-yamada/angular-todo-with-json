@@ -1,3 +1,38 @@
+# angular-todo-with-json
+
+This repository is for `Angular` practice.
+
+## start up
+
+package.json
+```json
+{
+  "name": "todo",
+  "version": "0.0.0",
+  "scripts": {
+    ...
+    "start": "concurrently --kill-others \"npm run start:proxy\" \"npm run mock:server\""
+  },
+```
+
+npm
+```sh
+npm start
+```
+
+open http://localhost:4200
+
+or
+
+1. install VS Code Extension: `Debugger for Chrome`.
+1. `F5`: debug run `Launch Chrome against localhost`.
+
+
+
+
+---
+
+
 # Todo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.

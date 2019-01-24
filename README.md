@@ -22,6 +22,13 @@ npm start
 
 open http://localhost:4200
 
+or
+
+1. install VS Code Extension: `Debugger for Chrome`.
+1. `F5`: debug run `Launch Chrome against localhost`.
+
+
+
 
 ---
 

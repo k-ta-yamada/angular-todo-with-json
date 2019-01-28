@@ -1,23 +1,13 @@
-<form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
-
-  <input type="text"
-    formControlName="task"
-    autofocus
-    placeholder="add todo"
-    required
-    >
-
+<div>
   <input
-    type="checkbox"
-    formControlName="done">
+    type="text"
+    [(ngModel)]="todo.task"
+    (keydown)="keyDownCode = $event.which"
+    (keyup.enter)="add($event)"
+    autofocus
+    placeholder="add todo">
 
-  <button
-    type="submit"
-    [disabled]="todoForm.invalid"
-    >add</button>
+  <input type="checkbox" [(ngModel)]="todo.done">
 
-</form>
-
-<pre>
-  {{ todoForm.value | json }}
-</pre>
+  <button (click)="add()">add</button>
+</div>

@@ -28,4 +28,13 @@ button {
   &:hover, &:focus {
     background-color: $hover-color;
   }
+  &:disabled {
+    color: gray;
+    background-color: rgb(230, 230, 230);
+  }
+}
+
+form, pre, ul {
+  border: 1px dashed royalblue;
+  margin: .5rem;
 }

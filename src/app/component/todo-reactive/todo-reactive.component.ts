@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Todo } from 'src/app/models/todo';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-todo-reactive',
@@ -11,12 +11,12 @@ export class TodoReactiveComponent implements OnInit {
 
   @Output() clickAdd = new EventEmitter<Todo>();
 
-  todoForm = new FormGroup({
-    task: new FormControl(''),
-    done: new FormControl(false),
+  todoForm = this.fb.group({
+    task: [''],
+    done: [false],
   });
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }

@@ -1,6 +1,13 @@
 <div>
-  <input type="text" [(ngModel)]="todo.task" (keyup.enter)="add()"
-    autofocus placeholder="add todo">
+  <input
+    type="text"
+    [(ngModel)]="todo.task"
+    (keydown)="keyDownCode = $event.which"
+    (keyup.enter)="add($event)"
+    autofocus
+    placeholder="add todo">
+
   <input type="checkbox" [(ngModel)]="todo.done">
+
   <button (click)="add()">add</button>
 </div>

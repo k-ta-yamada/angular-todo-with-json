@@ -10,6 +10,8 @@ export class TodoDetailComponent implements OnInit {
 
   todo: Todo = new Todo;
 
+  keyDownCode: number;
+
   @Output() clickAdd = new EventEmitter<Todo>();
 
   constructor() { }
@@ -17,7 +19,9 @@ export class TodoDetailComponent implements OnInit {
   ngOnInit() {
   }
 
-  add() {
+  add(e: KeyboardEvent) {
+    if (this.keyDownCode !== 13) { return; }
+
     this.clickAdd.emit(this.todo);
     this.todo = new Todo;
   }

@@ -3,6 +3,7 @@
   <input type="text"
     formControlName="task"
     required
+    maxlength="50"
     autofocus
     placeholder="add todo">
 
@@ -15,3 +16,11 @@
 <pre>
   {{todoForm.value | json}}
 </pre>
+<ul>
+  <li>status: [{{todoForm.status}}]</li>
+  <li>valid: [{{todoForm.valid}}]</li>
+  <li>invalid: [{{todoForm.invalid}}]</li>
+  <li>touched: [{{todoForm.touched}}]</li>
+  <li>pristine: [{{todoForm.pristine}}]</li>
+  <li>dirty: [{{todoForm.dirty}}]</li>
+</ul>

@@ -3,6 +3,11 @@ $padding: 10px;
 $font-size: large;
 $hover-color: lightyellow;
 
+form {
+  margin: $margin;
+  border: 1px dashed blue;
+}
+
 div {
   margin: $margin;
 }
@@ -15,6 +20,10 @@ input {
     padding: $padding;
     border-width: 0px 0px 1px 0px;
     width: 300px;
+  }
+
+  label > & {
+    width: 150px;
   }
 }
 

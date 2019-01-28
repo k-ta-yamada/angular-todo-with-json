@@ -18,9 +18,12 @@ export class TodoPageComponent implements OnInit {
   }
 
   clickAdd(todo: Todo) {
+    console.group(`TodoPageComponent`);
+    console.log(todo);
     this.todoService.add(todo).subscribe(
       r => this.todos.push(r)
     );
+    console.groupEnd();
   }
 
   clickUpd(todo: Todo) {

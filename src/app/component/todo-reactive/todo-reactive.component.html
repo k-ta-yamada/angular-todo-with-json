@@ -1,0 +1,14 @@
+<form [formGroup]="todoForm" (ngSubmit)="handleSubmit($event)">
+  <input type="text"
+    formControlName="task"
+    required
+    autofocus
+    placeholder="add todo"
+    >
+
+  <input type="checkbox"
+    formControlName="done"
+    >
+
+  <button [disabled]="todoForm.invalid">add</button>
+</form>

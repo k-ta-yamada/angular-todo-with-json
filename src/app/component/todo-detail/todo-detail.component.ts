@@ -19,9 +19,12 @@ export class TodoDetailComponent implements OnInit {
   ngOnInit() {
   }
 
-  add(e: KeyboardEvent) {
+  handleKeyUp(e: KeyboardEvent) {
     if (this.keyDownCode !== 13) { return; }
+    this.add();
+  }
 
+  add() {
     this.clickAdd.emit(this.todo);
     this.todo = new Todo;
   }

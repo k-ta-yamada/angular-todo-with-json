@@ -1,0 +1,35 @@
+$margin: .5rem;
+$padding: 10px;
+$font-size: large;
+$hover-color: lightyellow;
+
+div {
+  margin: $margin;
+}
+
+input {
+  margin-left: $margin;
+
+  &[type="text"] {
+    font-size: $font-size;
+    padding: $padding;
+    border-width: 0px 0px 1px 0px;
+    width: 300px;
+  }
+}
+
+button {
+  margin-left: $margin;
+  font-size: $font-size;
+  padding: $padding;
+  width: 5rem;
+  border-radius: .5rem;
+
+  &:hover, &:focus {
+    background-color: $hover-color;
+  }
+  &:disabled {
+    color: gray;
+    background-color: rgb(200, 200, 200);
+  }
+}

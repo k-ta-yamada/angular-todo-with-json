@@ -3,7 +3,7 @@
     type="text"
     [(ngModel)]="todo.task"
     (keydown)="keyDownCode = $event.which"
-    (keyup.enter)="add($event)"
+    (keyup.enter)="handleKeyUp($event)"
     autofocus
     placeholder="add todo">
 

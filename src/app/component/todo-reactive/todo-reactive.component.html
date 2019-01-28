@@ -9,7 +9,7 @@
 
   <input type="checkbox" formControlName="done">
 
-  <button type="button" (click)="add()">add</button>
+  <button type="button" (click)="add()" [disabled]="todoForm.invalid">add</button>
 
 </form>
 

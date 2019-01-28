@@ -1,0 +1,17 @@
+<form [formGroup]="todoForm" (ngSubmit)="add()">
+
+  <input type="text"
+    formControlName="task"
+    required
+    autofocus
+    placeholder="add todo">
+
+  <input type="checkbox" formControlName="done">
+
+  <button type="button" (click)="add()">add</button>
+
+</form>
+
+<pre>
+  {{todoForm.value | json}}
+</pre>

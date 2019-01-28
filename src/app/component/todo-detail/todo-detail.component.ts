@@ -10,11 +10,18 @@ export class TodoDetailComponent implements OnInit {
 
   todo: Todo = new Todo;
 
+  keyDownCode: number;
+
   @Output() clickAdd = new EventEmitter<Todo>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  handleKeyUp(e: KeyboardEvent) {
+    if (e.which !== this.keyDownCode) { return; }
+    this.add();
   }
 
   add() {

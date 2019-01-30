@@ -6,7 +6,7 @@ import { Todo } from 'src/app/models/todo';
   templateUrl: './todo-detail.component.html',
   styleUrls: ['./todo-detail.component.scss']
 })
-export class TodoDetailComponent implements OnInit {
+export class TodoDetailComponent {
 
   todo: Todo = new Todo;
 
@@ -14,9 +14,8 @@ export class TodoDetailComponent implements OnInit {
 
   @Output() clickAdd = new EventEmitter<Todo>();
 
-  constructor() { }
-
-  ngOnInit() {
+  handleKeyDown(e: KeyboardEvent) {
+    this.keyDownCode = e.which;
   }
 
   handleKeyUp(e: KeyboardEvent) {
